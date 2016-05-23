@@ -13,6 +13,6 @@ DESC
   s.source					= { :git => "https://github.com/hons82/THSlackLogger.git", :tag => "#{s.version}" }
   s.source_files			= "THSlackLogger/*.{h,m}"
   s.requires_arc			= true
-  s.dependency				"AFNetworking", "~> 3.0.4"
+  s.dependency				"AFNetworking", "~> 2.5.3"
   s.dependency				"CocoaLumberjack", "~> 2.2.0"
 end
