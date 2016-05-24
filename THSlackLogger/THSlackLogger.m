@@ -15,7 +15,7 @@
 
 @interface THSlackLogger ()
 
-@property (nonatomic, strong) AFHTTPSessionManager *manager;
+@property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
 @property (nonatomic, strong) NSURL *webhookURL;
 @property (nonatomic, strong) NSString *path;
 
@@ -67,7 +67,7 @@
     NSString *baseURLString = [NSString stringWithFormat:@"%@://%@", _webhookURL.scheme, _webhookURL.host];
     NSString *path = [[[_webhookURL pathComponents] componentsJoinedByString:@"/"] substringFromIndex:2];
     
-    self.manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURLString]];
+    self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:baseURLString]];
     self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
     self.manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
