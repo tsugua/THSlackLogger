@@ -7,7 +7,7 @@
 //
 
 #import "THSlackLogger.h"
-#import <AFNetworking/AFHTTPSessionManager.h>
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import <AFNetworking/AFURLRequestSerialization.h>
 
 #define kSlackPlistFilename @"Slack"
